@@ -8,35 +8,62 @@
 body{
     font-family: Arial, sans-serif;
     margin:0;
+    padding:0;
     background:#f5e6d3;
 }
+
 header{
     background:#5c2c06;
     color:white;
     text-align:center;
     padding:20px;
 }
+
+header h1{
+    margin:0;
+    font-size:36px;
+}
+
+header p{
+    margin:5px 0;
+}
+
 .menu{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:20px;
     padding:30px;
 }
+
 .card{
     background:white;
     border-radius:15px;
     padding:20px;
     box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
+
+.card h3{
+    color:#5c2c06;
+}
+
+.card p{
+    margin:8px 0;
+}
+
 button{
-    margin:5px 0 15px;
+    margin-top:10px;
     background:#8b4513;
     color:white;
     border:none;
-    padding:8px 12px;
+    padding:10px 15px;
     border-radius:8px;
     cursor:pointer;
 }
+
+button:hover{
+    background:#6d3410;
+}
+
 #cart{
     position:fixed;
     top:20px;
@@ -44,12 +71,15 @@ button{
     background:white;
     padding:12px 18px;
     border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
+
 footer{
     background:#5c2c06;
     color:white;
     text-align:center;
     padding:20px;
+    margin-top:20px;
 }
 </style>
 </head>
@@ -60,59 +90,112 @@ footer{
     <p>Khonsa, Tirap | Contact: +91 7005536434</p>
 </header>
 
-<div id="cart">🛒 Cart: 0 | ₹0</div>
+<div id="cart">🛒 Cart: 0</div>
 
 <section class="menu">
 
 <div class="card">
 <h3>Pork Specialties</h3>
 <p>Smoke Pork with Axone - ₹300</p>
-<button onclick="addToCart(300)">Add</button>
+<button onclick="addToCart()">Add</button>
 <p>Fresh Pork (Boil/Fry) - ₹250</p>
-<button onclick="addToCart(250)">Add</button>
+<button onclick="addToCart()">Add</button>
 <p>Pork with Bambooshoot - ₹300</p>
-<button onclick="addToCart(300)">Add</button>
-<p>Anishi - ₹400</p>
-<button onclick="addToCart(400)">Add</button>
+<button onclick="addToCart()">Add</button>
+<p>Pork with Banana Stem - ₹300</p>
+<button onclick="addToCart()">Add</button>
+<p>Smoke Pork with Yam - ₹300</p>
+<button onclick="addToCart()">Add</button>
+<p>pork with Anishi - ₹400</p>
+<button onclick="addToCart()">Add</button>
 </div>
 
 <div class="card">
 <h3>Chicken Items</h3>
 <p>Local Chicken Boil - ₹400</p>
-<button onclick="addToCart(400)">Add</button>
+<button onclick="addToCart()">Add</button>
+<p>Local Chicken Dry - ₹400</p>
+<button onclick="addToCart()">Add</button>
 <p>Chicken Butter Masala - ₹250</p>
-<button onclick="addToCart(250)">Add</button>
+<button onclick="addToCart()">Add</button>
 <p>Homely Chicken Curry - ₹200</p>
-<button onclick="addToCart(200)">Add</button>
+<button onclick="addToCart()">Add</button>
 </div>
 
 <div class="card">
 <h3>Fish</h3>
-<p>Fish Curry - ₹150</p>
-<button onclick="addToCart(150)">Add</button>
+<p>Fish Curry (Mustard) - ₹150</p>
+<button onclick="addToCart()">Add</button>
 <p>Fish Dry Boil - ₹200</p>
-<button onclick="addToCart(200)">Add</button>
+<button onclick="addToCart()">Add</button>
+<p>Fish with Dry Bambooshoot - ₹200</p>
+<button onclick="addToCart()">Add</button>
 </div>
 
 <div class="card">
-<h3>Rice</h3>
+<h3>Rice (Thali)</h3>
+<button onclick="addToCart()">Add</button>
 <p>Tupula Rice - ₹100</p>
-<button onclick="addToCart(100)">Add</button>
+<button onclick="addToCart()">Add</button>
 <p>Pork Thali - ₹200</p>
-<button onclick="addToCart(200)">Add</button>
+<button onclick="addToCart()">Add</button>
+<p>Local Chicken Thali - ₹400</p>
+<button onclick="addToCart()">Add</button>
 </div>
+
+<div class="card">
+<h3>Starters</h3>
+<p>Kabab (Veg) - ₹200</p>
+<button onclick="addToCart()">Add</button>
+<p>Pasta (White Sauce) - ₹250</p>
+<button onclick="addToCart()">Add</button>
+<p>Pakora - ₹100</p>
+<button onclick="addToCart()">Add</button>
+<p>Sandwich - ₹70</p>
+<button onclick="addToCart()">Add</button>
+<p>Cheese Potato - ₹70</p>
+<button onclick="addToCart()">Add</button>
+</div>
+
+<div class="card">
+<h3>Veg Main Course</h3>
+<p>Seasonal Veg - ₹100</p>
+<button onclick="addToCart()">Add</button>
+<p>Boil Veg - ₹80</p>
+<button onclick="addToCart()">Add</button>
+</div>
+
+<div class="card">
+<h3>Roti</h3>
+<p>Aloo Paratha - ₹100</p>
+<button onclick="addToCart()">Add</button>
+<p>Tawa Roti - ₹50</p>
+<button onclick="addToCart()">Add</button>
+<p>Puri Sabji - ₹50</p>
+<button onclick="addToCart()">Add</button>
+</div>
+
+<div class="card">
+<h3>Chutney (Extras)</h3>
+<p>Akhuni / Dried Fish Chutney - ₹50</p>
+<button onclick="addToCart()">Add</button>
+<p>Tomato Chutney - ₹30</p>
+<button onclick="addToCart()">Add</button>
+<p>Potato / Brinjal Chutney - ₹30</p>
+<button onclick="addToCart()">Add</button>
+</div>
+<br><br>
+
+<a id="upiLink" href="#" target="_blank">
+    <button onclick="payNow()">💳 Pay Now</button>
+</a>
+
+<p id="message"></p>
 
 </section>
 
-<div style="text-align:center; margin:20px;">
-<a id="upiLink" href="#" target="_blank">
-<button onclick="payNow()">💳 Pay Now</button>
-</a>
-<p id="message"></p>
-</div>
-
 <footer>
-© 2026 Momo's Cloud Kitchen 🍽️
+    © 2026 Momo's Cloud Kitchen 🍽️
 </footer>
 
 <script>
@@ -122,25 +205,39 @@ let total = 0;
 function addToCart(price){
     cart++;
     total += price;
+    document.getElementById("cart").innerText = "🛒 Cart: " + cart + " | ₹" + total;
+}
+function changeQty(price, action){
+    if(action === 1){
+        cart++;
+        total += price;
+    } else if(action === -1 && cart > 0){
+        cart--;
+        total -= price;
+    }
+
     document.getElementById("cart").innerText =
     "🛒 Cart: " + cart + " | ₹" + total;
 }
 
 function payNow(){
     if(total > 0){
-        let upiID = "9774458337@ptsbi";
+        let upiID = "9774458337@ptsbi";   // replace with your UPI
         let name = "Momo's Cloud Kitchen";
+
         let upiURL = `upi://pay?pa=${upiID}&pn=${name}&am=${total}&cu=INR`;
 
         document.getElementById("upiLink").href = upiURL;
         document.getElementById("message").innerText =
-        "✅ Total payment: ₹" + total;
+        "✅ Click payment button to complete ₹" + total;
     } else {
         document.getElementById("message").innerText =
         "⚠️ Add items first";
     }
 }
 </script>
-
 </body>
 </html>
+   
+
+
