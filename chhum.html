@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Candle Blow</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    margin-top: 80px;
+    color: white;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+.cake {
+    position: relative;
+    width: 200px;
+    height: 120px;
+    background: #ff99aa;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+
+.candle {
+    position: absolute;
+    width: 20px;
+    height: 60px;
+    background: white;
+    left: 90px;
+    top: -60px;
+    border-radius: 5px;
+}
+
+.flame {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background: orange;
+    border-radius: 50%;
+    top: -25px;
+    left: 0;
+    animation: flicker 0.3s infinite alternate;
+}
+
+@keyframes flicker {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(1.1); opacity: 0.8; }
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: white;
+    color: #ff4081;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎂 Happy Birthday!Chhumchum 🎉</h1>
+<p>Make a wish and blow the candle 🕯️✨</p>
+
+    <div class="cake">
+        <div class="candle">
+            <div class="flame" id="flame"></div>
+        </div>
+    </div>
+
+    <button onclick="blowCandle()">Blow Candle 💨</button>
+</div>
+
+<script>
+function blowCandle() {
+    document.getElementById("flame").style.display = "none";
+    alert("✨ Wish made! Happy Birthday! 🎉");
+}
+</script>
+
+</body>
+</html>
